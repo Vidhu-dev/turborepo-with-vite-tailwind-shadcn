@@ -1,6 +1,6 @@
 # Turborepo + Vite + shadcn/ui Starter
 
-This is a customized Turborepo setup with Vite, React, ShadCN, and Tailwind CSS.
+This is a customized Turborepo setup with Vite, React, ShadCN, Tailwind CSS, NodeJS and Prisma. 
 
 ## Getting Started
 
@@ -14,6 +14,9 @@ This Turborepo includes the following packages and apps:
 - `vite client`: A [Vite](https://vitejs.dev/) + [React](https://reactjs.org/) app with [Tailwind CSS](https://tailwindcss.com/) and [shadcn/ui](https://ui.shadcn.com/)
   - Located in `apps/client`
   - Uses components from the shared UI library
+- `server`: A Node.js server 
+ - Located in `apps/node-server` 
+ - Handles database operations and API endpoints
 
 ### Packages
 
@@ -23,6 +26,10 @@ This Turborepo includes the following packages and apps:
 - `@repo/eslint-config`: Shared ESLint configurations
 - `@repo/typescript-config`: Shared TypeScript configurations
 - `@repo/tailwind-config`: Shared Tailwind CSS configuration
+- `prisma`: Database schema and Prisma client
+ - Located in `packages/prisma`
+ - Centralized database schema definition
+ - Generated Prisma Client shared across apps
 
 ## Key Features
 
@@ -52,7 +59,6 @@ pnpm dlx shadcn-ui@latest add [component-name]
 ```
 3. Export it from the `index.ts`
 The component will be added to `packages/ui/components/ui/` and can be imported into your client app through `@repo/ui`
-
 
 ## Development
 
